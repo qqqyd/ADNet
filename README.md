@@ -36,14 +36,14 @@ This is a pytorch implementation for paper [ADNet](https://ieeexplore.ieee.org/d
 
 Prepare the datasets and put them in ```datasets/```.
 
-Download the trained models in [Google Drive](https://drive.google.com/drive/folders/1CBe5qQGJPVAA48BEX-wBX72200PXXK9Z?usp=share_link) and put them in ```models/```.
+Download the trained models in [Google Drive](https://drive.google.com/drive/folders/1KMMxf8x9yV0M-RfH4k5V0LjGQSzzy189?usp=sharing) and put them in ```models/```.
 
 Evaluate the models using following commands:
 ```bash
-CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/totaltext.yaml --resume models/adnet_td500 --polygon --box_thresh 0.7
+CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/totaltext.yaml --resume models/adnet_total --polygon --box_thresh 0.7
 CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/td500.yaml --resume models/adnet_td500 --polygon --box_thresh 0.7
-CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/ctw1500.yaml --resume models/adnet_td500 --polygon --box_thresh 0.8
-CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/ic15.yaml --resume models/adnet_td500 --polygon --box_thresh 0.8
+CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/ctw1500.yaml --resume models/adnet_ctw1500 --polygon --box_thresh 0.8
+CUDA_VISIBLE_DEVICES=0 python eval.py experiments/seg_detector/ic15.yaml --resume models/adnet_ic15 --polygon --box_thresh 0.8
 ```
 
 ## Training
@@ -61,6 +61,8 @@ If you find our method useful for your reserach, please cite
       author={Qu, Yadong and Xie, Hongtao and Fang, Shancheng and Wang, Yuxin and Zhang, Yongdong},
       journal={IEEE Transactions on Multimedia}, 
       title={ADNet: Rethinking the Shrunk Polygon-Based Approach in Scene Text Detection}, 
-      year={2022},
-      pages={1-14},
+      year={2023},
+      volume={25},
+      number={},
+      pages={6983-6996},
       doi={10.1109/TMM.2022.3216729}}
